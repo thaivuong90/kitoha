@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>荷物詳細 | ニナウ</title>
+	<link rel="stylesheet" href="css/style.css" media="all">
+	<link rel="stylesheet" href="css/setting.css" media="all">
+	<link rel="stylesheet" href="css/font-awesome.min.css" media="all">
+	<script src="js/lib/jquery-3.2.1.min.js"></script>
+	<script src="js/common/style.js"></script>
+	<script src="js/common/localstorage.js"></script>
+	<script src="js/common/utility.js"></script>
+	<script src="js/common/data/app_info.js"></script>
+	<script src="js/common/data/run_info.js"></script>
+	<script src="js/common/data/status_info.js"></script>
+	<script src="js/common/transitions.js"></script>
+	<script src="js/pages/ni-now-F06d.js"></script>
+</head>
+<body>
+	<header>
+		<div class="head_main">
+			<div class="btn_back">
+				<i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>
+			</div>
+			<h1 class="text-center">
+				<img src="images/logo_ni-now01.png" alt="ニナウ">
+			</h1>
+			<div class="mypage">
+				<a href="ni-now-M01a.html">
+					<img src="images/ico_mypage.png" alt="マイページ">
+				</a>
+			</div>
+		</div>
+		<div class="area_infomation pad-none border_vert">
+			<h2>荷物詳細</h2>
+			<form class="border-top">
+				<div class="select_cancel">
+					<label>
+						<select>
+							<option value="">返品理由</option>
+								<option value="">未着</option>
+								<option value="">荷受人不明</option>
+								<option value="">個数違い</option>
+								<option value="">漏損</option>
+								<option value="">内用品破損</option>
+								<option value="">外装破損</option>
+								<option value="">汚損</option>
+								<option value="">腐敗</option>
+								<option value="">減量</option>
+								<option value="">紛失・盗難</option>
+								<option value="">消失</option>
+								<option value="">調査中</option>
+								<option value="">その他</option>
+						</select>
+					</label>
+					<button type="submit" name="" value="confirm">OK</button>
+				</div>
+			</form>
+		</div>
+	</header>
+	<div class="contents">
+		<div class="container mg-width-00">
+			<div class="list_box_type02">
+				<dl>
+					<dt>荷札No</dt>
+					<dd>00000000000004</dd>
+				</dl>
+				<dl>
+					<dt>荷物名</dt>
+					<dd>冷蔵庫</dd>
+				</dl>
+				<dl>
+					<dt>荷主</dt>
+					<dd>家電量販店</dd>
+				</dl>
+				<dl>
+					<dt>納品</dt>
+					<dd>2017年9月12日</dd>
+				</dl>
+				<dl>
+					<dt>備考</dt>
+					<dd>壊れ物注意</dd>
+				</dl>
+				<dl>
+					<dt>重量</dt>
+					<dd>-&nbsp;kg</dd>
+				</dl>
+				<dl>
+					<dt>積込</dt>
+					<dd class="checked">
+						<i class="fa fa-check" aria-hidden="true"></i>
+					</dd>
+				</dl>
+				<dl>
+					<dt>配送</dt>
+					<dd class="unfinished">
+						<i class="fa fa-minus" aria-hidden="true"></i>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="common_btn btn_receipt inline" onclick="onReportButtonClick();">
+			<!--ボタン操作無効時は「btn_disable」classを付与-->
+			<div>判取確認</div>
+		</div>
+	</footer>
+</body>
+</html>

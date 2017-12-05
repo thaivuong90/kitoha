@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>配送開始 | ニナウ</title>
+	<link rel="stylesheet" href="css/style.css" media="all">
+	<link rel="stylesheet" href="css/setting.css" media="all">
+	<link rel="stylesheet" href="css/font-awesome.min.css" media="all">
+	<script src="js/lib/jquery-3.2.1.min.js"></script>
+	<script src="js/common/style.js"></script>
+	<script src="js/common/localstorage.js"></script>
+	<script src="js/common/utility.js"></script>
+	<script src="js/common/data/app_info.js"></script>
+	<script src="js/common/data/run_info.js"></script>
+	<script src="js/common/data/status_info.js"></script>
+	<script src="js/common/transitions.js"></script>
+	<script src="js/pages/ni-now-F06b.js"></script>
+</head>
+<body class="pos-rel">
+	
+	<header>
+		<div class="head_main">
+			<div class="btn_back"></div>
+			<h1 class="text-center">
+				<img src="images/logo_ni-now01.png" alt="ニナウ">
+			</h1>
+			<div class="mypage">
+				<a href="ni-now-M01a.html">
+					<img src="images/ico_mypage.png" alt="マイページ">
+				</a>
+			</div>
+		</div>
+		<div class="area_infomation pad-none border_vert">
+			<div class="progress">
+				<div>配送開始</div>
+				<div>帰社報告</div>
+			</div>
+		</div>
+	</header>
+	<div class="contents">
+		<div class="container mg-width-00">
+			<!-- TAB CONTROLLERS -->
+			<input id="panel_ctrl01" class="panel-radios" type="radio" name="tab-radios" checked>
+			<input id="panel_ctrl02" class="panel-radios" type="radio" name="tab-radios">
+
+			<!-- TABS LIST -->
+			<ul class="tabs_list">
+			    <!-- MENU TOGGLE -->
+			    <li id="li-for-panel_inner01" class="front_radius">
+			      <label class="panel_label" for="panel_ctrl01">全件表示</label>
+			    </li>
+			    <li id="li-for-panel_inner02" class="rear_radius">
+			      <label class="panel_label" for="panel_ctrl02">未了表示</label>
+			    </li>
+			</ul>
+			<!-- THE PANELS -->
+			<article id="panels">
+				<section id="panel_inner01">
+					<main>
+						<div class="list_box_type01" id="all_list">
+							<input type="hidden" id="order_ids" value="" />
+							<!--
+							・バーコード読取時⇒「complete」classを付与
+							・不在時⇒「absence」classを付与
+							-->
+							<section class="complete">
+								<!--ステータス追加時-->
+								<div class="status">
+									<img src="images/ico_complete.png" alt="">
+								</div>
+								<!--ここまで-->
+								<div class="inner_contents">
+									<h2>株式会社KITOHA</h2>
+									<p>東京都千代田区神田佐久間町</p>
+									<ul class="cargo_info">
+										<li><img src="images/ico_clock_complete.png"></li>
+										<li><img src="images/ico_kg_complete.png"></li>
+									</ul>
+								</div>
+							</section>
+							<section class="absence">
+								<!--ステータス追加時-->
+								<div class="status">
+									<img src="images/ico_absence.png" alt="">
+								</div>
+								<!--ここまで-->
+								<div class="inner_contents">
+									<h2 class="fo-bold">GEヘルスケア・ジャパン</h2>
+									<p>東京都日野市旭が丘4-7-127</p>
+									<ul class="cargo_info">
+										<li><img src="images/ico_clock_absence.png"></li>
+										<li><img src="images/ico_kg_absence.png"></li>
+									</ul>
+								</div>
+							</section>
+							<section>
+								<div class="inner_contents">
+									<h2>富士ゼロックス株式会社</h2>
+									<p>東京都港区赤坂9丁目7-3</p>
+								</div>
+							</section>
+						</div>
+		     		 </main>
+		    	</section>
+				<section id="panel_inner02">
+					<main>
+						<div class="list_box_type01" id="uncomp_list">
+						</div>
+		     		 </main>
+		    	</section>
+			</article>
+		</div>
+	</div>
+	<footer>
+		<div class="common_btn btn_checked btn_disable inline" id="report_button" onclick="onReportButtonClick();">
+			<!--ボタン操作無効時は「btn_disable」classを付与-->
+			<div>配送完了</div>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>伝票読取 | ニナウ</title>
+	<link rel="stylesheet" href="css/style.css" media="all">
+	<link rel="stylesheet" href="css/setting.css" media="all">
+	<link rel="stylesheet" href="css/font-awesome.min.css" media="all">
+	<script src="js/lib/jquery-3.2.1.min.js"></script>
+	<script src="js/lib/sweetalert2/sweetalert2.all.min.js"></script>
+	<script src="js/lib/sweetalert2/sweetalert2.min.js"></script>
+	<script src="js/common/style.js"></script>
+	<script src="js/common/localstorage.js"></script>
+	<script src="js/common/utility.js"></script>
+	<script src="js/common/data/app_info.js"></script>
+	<script src="js/common/data/run_info.js"></script>
+	<script src="js/common/data/status_info.js"></script>
+	<script src="js/common/transitions.js"></script>
+	<script src="js/pages/ni-now-F03c.js"></script>
+</head>
+<body>
+	<header>
+		<div class="head_main">
+			<div class="btn_back"></div>
+			<h1 class="text-center">
+				<img src="images/logo_ni-now01.png" alt="ニナウ">
+			</h1>
+			<div class="mypage">
+				<a href="ni-now-M01a.html">
+					<img src="images/ico_mypage.png" alt="マイページ">
+				</a>
+			</div>
+		</div>
+		<div class="area_infomation pad-none border_vert">
+			<div class="progress">
+				<div>バーコード読取</div>
+				<div>積付確認</div>
+			</div>
+			<form class="border-top">
+				<div class="area_input">
+					<input type="text" id="input_voucher_no" placeholder="伝票番号を入力してください。">
+					<div id="entry_button" value="confirm" onclick="onEntryClick();">OK</div>
+				</div>
+			</form>
+		</div>
+	</header>
+	<div class="contents">
+		<div class="container mg-width-00">
+			<div class="list_box_type01" id="all_list">
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="common_btn btn_checked inline" id="report_button" onclick="onReportButtonClick();">
+			<!--ボタン操作無効時は「btn_disable」classを付与-->
+			<div>読取完了</div>
+		</div>
+	</footer>
+</body>
+</html>

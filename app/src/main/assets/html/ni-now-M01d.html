@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>機能設定 | ニナウ</title>
+	<link rel="stylesheet" href="css/style.css" media="all">
+	<link rel="stylesheet" href="css/setting.css" media="all">
+	<link rel="stylesheet" href="css/font-awesome.min.css" media="all">
+	<script src="js/lib/jquery-3.2.1.min.js"></script>
+	<script src="js/lib/sweetalert2/sweetalert2.all.min.js"></script>
+	<script src="js/lib/sweetalert2/sweetalert2.min.js"></script>
+	<script src="js/common/style.js"></script>
+	<script src="js/common/localstorage.js"></script>
+	<script src="js/common/utility.js"></script>
+	<script src="js/common/data/app_info.js"></script>
+	<script src="js/common/data/mode_info.js"></script>
+	<script src="js/common/data/run_info.js"></script>
+	<script src="js/common/data/status_info.js"></script>
+	<script src="js/common/transitions.js"></script>
+	<script src="js/pages/ni-now-M01d.js"></script>
+</head>
+<body>
+	<header>
+		<div class="head_main">
+			<div class="btn_back" onclick="onBackButtonClick();">
+				<i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>
+			</div>
+			<h1 class="text-center">
+				<img src="images/logo_ni-now01.png" alt="ニナウ">
+			</h1>
+			<div class="mypage"></div>
+		</div>
+		<div class="area_infomation pad-none border_vert">
+			<h2>機能設定</h2>
+		</div>
+	</header>
+	<div class="contents">
+		<div class="container mg-width-00 mg-height-00">
+			<div class="list_box_type03 no-arrow mg-top-20 mg-bottom-20">
+				<dl>
+					<dt>お知らせ表示</dt>
+					<dd class="toggle">
+						<input type="checkbox" id="toggle_news" class="toggle-select">
+						<label for="toggle_news"></label>
+					</dd>
+				</dl>
+				<p>業務開始画面からお知らせを見ることができます。</p>
+			</div>
+			<div class="list_box_type03 no-arrow mg-bottom-20">
+				<dl>
+					<dt>配送指示受信</dt>
+					<dd class="toggle tog-select">
+						<input type="checkbox" id="toggle_entry" class="toggle-select">
+						<label for="toggle_entry"></label>
+					</dd>
+				</dl>
+				<p>
+					手動で伝票を読み取る場合は無効にしてください。
+				</p>
+			</div>
+			<div class="list_box_type03 no-arrow mg-bottom-20">
+				<dl>
+					<dt>写真撮影</dt>
+					<dd class="toggle">
+						<input type="checkbox" id="toggle_photo" class="toggle-select">
+						<label for="toggle_photo"></label>
+					</dd>
+				</dl>
+				<dl>
+					<dt>電子サイン</dt>
+					<dd class="toggle">
+						<input type="checkbox" id="toggle_sign" class="toggle-select">
+						<label for="toggle_sign"></label>
+					</dd>
+				</dl>
+			</div>
+			<div class="list_box_type03 no-arrow mg-bottom-20">
+				<dl>
+					<dt>判取確認</dt>
+					<dd class="toggle">
+						<input type="checkbox" id="toggle_cert" class="toggle-select">
+						<label for="toggle_cert"></label>
+					</dd>
+				</dl>
+			</div>
+			<div class="list_box_type03 no-arrow mg-bottom-20">
+				<dl>
+					<dt>帰社報告</dt>
+					<dd class="toggle">
+						<input type="checkbox" id="toggle_return" class="toggle-select">
+						<label for="toggle_return"></label>
+					</dd>
+				</dl>
+			</div>
+			<div class="list_box_type03 no-arrow mg-bottom-20">
+				<dl>
+					<dt>荷卸し</dt>
+					<dd class="toggle">
+						<input type="checkbox" id="toggle_unload" class="toggle-select">
+						<label for="toggle_unload"></label>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

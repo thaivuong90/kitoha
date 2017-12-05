@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+/************************************** Style*/
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.mg-bottom-05 {
+	margin-bottom: 5px !important;
+}
+.mg-bottom-10 {
+	margin-bottom: 10px !important;
+}
+.mg-bottom-15 {
+	margin-bottom: 15px !important;
+}
+.mg-bottom-20 {
+	margin-bottom: 20px !important;
+}
+.mg-bottom-30 {
+	margin-bottom: 30px !important;
+}
+.mg-bottom-50 {
+	margin-bottom: 50px !important;
+}
+.mg-top-20 {
+	margin-top: 20px !important;
+}
+/*フォントカラー*/
+.fo-blue {
+	color: #1c2c59 !important;
+}
+/*フォントサイズ*/
+.fo-14 {
+	font-size: 14px !important;
+}
+.fo-18 {
+	font-size: 18px !important;
+}
+.fo-20 {
+	font-size: 20px !important;
+}
+.fo-24 {
+	font-size: 24px !important;
+}
+.fo-30 {
+	font-size: 30px !important;
+}
+.fo-36 {
+	font-size: 36px !important;
+}
+
+/*フォントファミリー*/
+.font-type-01 {
+	 font-family: "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+	 font-weight: bold;
+}
+/*フォントタイプ*/
+.fo-bold {
+	font-weight: bold;
+}
+/*背景カラー*/
+.base-gray {
+	background: #f3f3f3 !important;
+}
+.text-center {
+	text-align: center !important;
+}
+.text-right {
+	text-align: right !important;
+}
+.text-left {
+	text-align: left !important;
+}
+.text-center_s-left {
+	text-align: center;
+}
+.text-top {
+	vertical-align: top !important;
+}
+.text-middle {
+	vertical-align: middle !important;
+}
+.pos-sta {
+	position: static !important;
+}
+.pos-rel {
+	position: relative !important;
+}
+.pad-none {
+	padding: 0 !important;
+}
+@media only screen and (max-width: 550px) {
+.text-center_s-left {
+	text-align: left;
+}
+}

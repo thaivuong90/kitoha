@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>積付開始 | ニナウ</title>
+	<link rel="stylesheet" href="css/style.css" media="all">
+	<link rel="stylesheet" href="css/setting.css" media="all">
+	<link rel="stylesheet" href="css/font-awesome.min.css" media="all">
+	<script src="js/lib/jquery-3.2.1.min.js"></script>
+	<script src="js/common/style.js"></script>
+	<script src="js/common/localstorage.js"></script>
+	<script src="js/common/utility.js"></script>
+	<script src="js/common/data/app_info.js"></script>
+	<script src="js/common/data/run_info.js"></script>
+	<script src="js/common/data/status_info.js"></script>
+	<script src="js/common/transitions.js"></script>
+	<script src="js/pages/ni-now-F04b.js"></script>
+</head>
+<body class="pos-rel">
+	<!--モーダル-->
+	<div id="modal-content">
+		<div id="modal-close">
+			<img src="images/btn_close_l.png">
+		</div>
+		<section>
+			<h2 class="fo-bold">通知</h2>
+			<p id="modal_contents">
+				配送指示を取り消します。<br>よろしいですか？
+			</p>
+		</section>
+		<div class="btn_col-2">
+			<div class="text-center" onclick="onModalOKButtonClick();">OK</div>
+			<div class="text-center" onclick="onModalCancelButtonClick();">キャンセル</div>
+		</div>
+	</div>
+	<!--ここまで-->
+	<header>
+		<div class="head_main">
+			<div class="modal-open btn_head_common cancel">取消</div>
+			<h1 class="text-center">
+				<img src="images/logo_ni-now01.png" alt="ニナウ">
+			</h1>
+			<div class="mypage">
+				<a href="ni-now-M01a.html">
+					<img src="images/ico_mypage.png" alt="マイページ">
+				</a>
+			</div>
+		</div>
+		<div class="area_infomation pad-none border_vert">
+			<div class="progress">
+				<div>積付確認</div>
+				<div>出発報告</div>
+			</div>
+			<form class="border-top" id="form_entry">
+				<div class="area_input">
+					<input type="text" id="input_voucher_no" placeholder="伝票番号を入力してください。">
+					<div id="entry_button" value="confirm" onclick="onEntryClick();">OK</div>
+				</div>
+			</form>
+		</div>
+	</header>
+	<div class="contents">
+		<div class="container mg-width-00">
+			<!-- TAB CONTROLLERS -->
+			<input id="panel_ctrl01" class="panel-radios" type="radio" name="tab-radios" checked>
+			<input id="panel_ctrl02" class="panel-radios" type="radio" name="tab-radios">
+
+			<!-- TABS LIST -->
+			<ul class="tabs_list">
+				<!-- MENU TOGGLE -->
+				<li id="li-for-panel_inner01" class="front_radius">
+					<label class="panel_label" for="panel_ctrl01">全件表示</label>
+				</li>
+				<li id="li-for-panel_inner02" class="rear_radius">
+					<label class="panel_label" for="panel_ctrl02">未了表示</label>
+				</li>
+			</ul>
+			<!-- THE PANELS -->
+			<article id="panels">
+				<section id="panel_inner01">
+					<main>
+						<div class="list_box_type01" id="all_list">
+						</div>
+		     		 </main>
+		    	</section>
+				<section id="panel_inner02">
+					<main>
+						<div class="list_box_type01" id="uncomp_list">
+						</div>
+		     		 </main>
+		    	</section>
+			</article>
+		</div>
+	</div>
+	<footer>
+		<div class="common_btn btn_checked inline" id="next_button" onclick="onNextButtonClick();">
+			<!--ボタン操作無効時は「btn_disable」classを付与-->
+			<div>積付完了</div>
+		</div>
+	</footer>
+</body>
+</html>

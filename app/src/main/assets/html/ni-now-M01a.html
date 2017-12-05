@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>設定 | ニナウ</title>
+	<link rel="stylesheet" href="css/style.css" media="all">
+	<link rel="stylesheet" href="css/setting.css" media="all">
+	<link rel="stylesheet" href="css/font-awesome.min.css" media="all">
+	<script src="js/lib/jquery-3.2.1.min.js"></script>
+	<script src="js/common/style.js"></script>
+	<script src="js/common/localstorage.js"></script>
+	<script src="js/common/utility.js"></script>
+	<script src="js/common/data/app_info.js"></script>
+	<script src="js/common/data/mode_info.js"></script>
+	<script src="js/common/data/run_info.js"></script>
+	<script src="js/common/data/status_info.js"></script>
+	<script src="js/common/transitions.js"></script>
+	<script src="js/pages/ni-now-M01a.js"></script>
+</head>
+<body>
+	<!--モーダル-->
+	<div id="modal-content">
+		<div id="modal-close">
+			<img src="images/btn_close_l.png">
+		</div>
+		<section>
+			<h2 class="fo-bold">お知らせ</h2>
+			<p id="modal_contents"></p>
+		</section>
+		<div class="modal-ok text-center" onclick="onModalOKButtonClick();">OK</div>
+	</div>
+	<!--ここまで-->
+	<header>
+		<div class="head_main">
+			<div class="btn_back" onclick="onBackButtonClick();">
+				<i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>
+			</div>
+			<h1 class="text-center">
+				<img src="images/logo_ni-now01.png" alt="ニナウ">
+			</h1>
+			<div class="mypage"></div>
+		</div>
+	</header>
+	<div class="contents height-auto">
+		<div class="container mg-width-00 mg-height-00">
+			<div class="list_box_type03 mg-top-20 mg-bottom-20">
+				<dl onclick="onTextFieldClick(1)">
+					<dt>サーバー</dt>
+					<dd id="server_name"></dd>
+				</dl>
+				<dl onclick="onTextFieldClick(2)">
+					<dt>企業ID</dt>
+					<dd id="company_id"></dd>
+				</dl>
+				<dl onclick="onTextFieldClick(3)">
+					<dt>ユーザーID</dt>
+					<dd id="user_name"></dd>
+				</dl>
+				<dl onclick="onTextFieldClick(4)">
+					<dt>パスワード</dt>
+					<dd id="password"></dd>
+				</dl>
+			</div>
+			<div class="list_box_type03 mg-bottom-20">
+				<dl onclick="onComboFieldClick(1)">
+					<dt>ドライバー</dt>
+					<dd id="driver_name"></dd>
+				</dl>
+			</div>
+			<div class="list_box_type03 mg-bottom-20">
+				<dl onclick="onComboFieldClick(2)">
+					<dt>車両</dt>
+					<dd id="car_no"></dd>
+				</dl>
+			</div>
+			<div class="list_box_type03">
+				<div onclick="onToggleFieldClick()">機能設定</div>
+			</div>
+		</div>
+	</div>
+	<div id="ls_clear"></div>
+	<footer id="footer">
+		<div class="common_btn bottom_setting_btn">
+			<div class="modal-open">お知らせ</div>
+			<div id="unsend_button" onclick="onUnsendButtonClick();">
+				未送信一覧
+				<!--未送信データがある場合-->
+				<div id="unsend_num"></div>
+				<!--ここまで-->
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

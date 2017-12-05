@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>業務終了 | ニナウ</title>
+	<link rel="stylesheet" href="css/style.css" media="all">
+	<link rel="stylesheet" href="css/setting.css" media="all">
+	<link rel="stylesheet" href="css/font-awesome.min.css" media="all">
+	<script src="js/lib/jquery-3.2.1.min.js"></script>
+	<script src="js/common/style.js"></script>
+	<script src="js/common/localstorage.js"></script>
+	<script src="js/common/utility.js"></script>
+	<script src="js/common/data/app_info.js"></script>
+	<script src="js/common/data/run_info.js"></script>
+	<script src="js/common/data/status_info.js"></script>
+	<script src="js/common/transitions.js"></script>
+	<script src="js/pages/ni-now-F10b.js"></script>
+</head>
+<body>
+	<!--モーダル-->
+	<div id="modal-content">
+		<div id="modal-close">
+			<img src="images/btn_close_l.png">
+		</div>
+		<section>
+			<h2 class="fo-bold">業務終了</h2>
+			<p id="modal_contents">
+				お疲れ様でした。<br />
+				これで今回の配送業務は終了になります。
+			</p>
+		</section>
+		<div class="modal-ok text-center" onclick="onModalOKButtonClick();">OK</div>
+	</div>
+	<!--ここまで-->
+	<header>
+		<div class="head_main">
+			<div class="btn_back"></div>
+			<h1 class="text-center">
+				<img src="images/logo_ni-now01.png" alt="ニナウ">
+			</h1>
+			<div class="mypage">
+				<a href="ni-now-M01a.html">
+					<img src="images/ico_mypage.png" alt="マイページ">
+				</a>
+			</div>
+		</div>
+		<div class="area_infomation pad-none border_vert">
+			<div class="progress_finish">業務終了</div>
+		</div>
+	</header>
+	<div class="contents">
+		<div class="container">
+			<div class="result_contents">
+				<section>
+					<h2>終了時間</h2>
+					<p id="report_time"></p>
+				</section>
+				<section>
+					<h2>車両番号</h2>
+					<p id="car_no"></p>
+				</section>
+			</div>
+		</div>
+	<footer>
+		<div class="common_btn btn_checked inline modal-open" id="next_button">
+			<!--ボタン操作無効時は「btn_disable」classを付与-->
+			<div>業務終了</div>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>配送データ | ニナウ</title>
+	<link rel="stylesheet" href="css/style.css" media="all">
+	<link rel="stylesheet" href="css/setting.css" media="all">
+	<link rel="stylesheet" href="css/font-awesome.min.css" media="all">
+	<script src="js/lib/jquery-3.2.1.min.js"></script>
+	<script src="js/common/style.js"></script>
+	<script src="js/common/localstorage.js"></script>
+	<script src="js/common/utility.js"></script>
+	<script src="js/common/data/app_info.js"></script>
+	<script src="js/common/data/run_info.js"></script>
+	<script src="js/common/data/status_info.js"></script>
+	<script src="js/common/transitions.js"></script>
+	<script src="js/pages/ni-now-F04c.js"></script>
+</head>
+<body>
+	<header>
+		<div class="head_main">
+			<div class="btn_back" onclick="onBackButtonClick();">
+				<i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>
+			</div>
+			<h1 class="text-center">
+				<img src="images/logo_ni-now01.png" alt="ニナウ">
+			</h1>
+			<div class="mypage">
+				<a href="ni-now-M01a.html">
+					<img src="images/ico_mypage.png" alt="マイページ">
+				</a>
+			</div>
+		</div>
+		<div class="area_infomation pad-none border_vert">
+			<h2>配送データ</h2>
+			<form class="border-top" id="form_entry">
+				<div class="select_cancel">
+					<label>
+						<select id="input_reason">
+							<option value="">除外理由</option>
+							<option value="02">未着</option>
+							<option value="05">荷受人不明</option>
+							<option value="10">個数違い</option>
+							<option value="11">濡損</option>
+							<option value="12">内容品破損</option>
+							<option value="13">外装破損</option>
+							<option value="14">汚損</option>
+							<option value="15">腐敗</option>
+							<option value="16">減量</option>
+							<option value="18">消失</option>
+							<option value="19">調査中</option>
+							<option value="99">その他(キャンセル等)</option>
+						</select>
+					</label>
+					<button type="submit" name="" value="confirm" onclick="onExcludeResonButtonClick();">OK</button>
+				</div>
+			</form>
+		</div>
+	</header>
+	<div class="contents">
+		<div class="container mg-width-00">
+			<!-- TAB CONTROLLERS -->
+			<input id="panel_ctrl01" class="panel-radios" type="radio" name="tab-radios" checked>
+			<input id="panel_ctrl02" class="panel-radios" type="radio" name="tab-radios">
+
+			<!-- TABS LIST -->
+			<ul class="tabs_list">
+			    <!-- MENU TOGGLE -->
+			    <li id="li-for-panel_inner01" class="front_radius">
+			      <label class="panel_label" for="panel_ctrl01">荷物情報</label>
+			    </li>
+			    <li id="li-for-panel_inner02" class="rear_radius">
+			      <label class="panel_label" for="panel_ctrl02">配送先情報</label>
+			    </li>
+			</ul>
+			<!-- THE PANELS -->
+			<article id="panels">
+				<section id="panel_inner01">
+					<main>
+						<div class="list_box_type02 mg-bottom-20">
+							<dl>
+								<dt>伝票番号</dt>
+								<dd id="order_no"></dd>
+								<input type="hidden" id="order_id" value="">
+							</dl>
+							<dl>
+								<dt>個口番号</dt>
+								<dd id="flat_no"></dd>
+							</dl>
+							<dl>
+								<dt>荷物名</dt>
+								<dd id="product_name"></dd>
+							</dl>
+							<dl>
+								<dt>積付</dt>
+								<dd class="checked" id="status">
+									<i class="fa fa-check" aria-hidden="true"></i>
+								</dd>
+							</dl>
+						</div>
+		     		 </main>
+		    	</section>
+				<section id="panel_inner02">
+					<main>
+						<div class="list_box_type02">
+							<dl>
+								<dt>路順</dt>
+								<dd id="transmission_order_no"></dd>
+							</dl>
+							<dl>
+								<dt>宛先</dt>
+								<dd id="name"></dd>
+							</dl>
+							<dl>
+								<dt>電話番号</dt>
+								<dd id="phone"></dd>
+							</dl>
+							<dl>
+								<dt>郵便番号</dt>
+								<dd id="post_code"></dd>
+							</dl>
+							<dl>
+								<dt>住所</dt>
+								<dd id="address"></dd>
+							</dl>
+							<dl>
+								<dt>時間指定</dt>
+								<dd id="time_order"></dd>
+							</dl>
+							<dl>
+								<dt>重量</dt>
+								<dd id="weight"></dd>
+							</dl>
+							<dl>
+								<dt>配送メモ</dt>
+								<dd id="memo"></dd>
+							</dl>
+						</div>
+		     		</main>
+		    	</section>
+			</article>
+		</div>
+	</div>
+</body>
+</html>
